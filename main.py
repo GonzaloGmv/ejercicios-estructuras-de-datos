@@ -1,4 +1,5 @@
 from clases.ejr1 import *
+from clases.ejr2 import *
 
 if __name__ == '__main__':
     while True:
@@ -15,5 +16,8 @@ if __name__ == '__main__':
         alternativa = Si("2 + 2 == 4", mostrar_ok, mostrar_ko) 
         bloque_alternativa = Bloque() 
         bloque_alternativa.agregarInstruction(alternativa) 
-        bucle = MientrasQue(True, bloque_alternativa) 
- 
+        bucle = MientrasQue(True, bloque_alternativa)
+    
+    elif ejr == '2':
+        ejercicio = ejer2(input('Escriba la primera linea: '), input('Escriba la segunda linea'))
+        ejercicio.escribir(input('Escriba el nombre del archivo que quiere crear: '))
